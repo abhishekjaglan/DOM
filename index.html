@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Playground</title>
+    <style>
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .section h2 {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .code-snippet {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .list-container {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list-container li {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-container input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>DOM Manipulation Playground</h1>
+
+        <div class="section">
+            <h2>Basic HTML Elements</h2>
+            <p>This is a paragraph element.</p>
+            <div class="code-snippet">
+                // Select this paragraph using DOM
+                document.querySelector('p');
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>List Elements</h2>
+            <ul class="list-container">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <div class="code-snippet">
+                // Select all list items
+                document.querySelectorAll('li');
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Image Element</h2>
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" alt="Placeholder image">
+            </div>
+            <div class="code-snippet">
+                // Select the image element
+                document.querySelector('img');
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Form Elements</h2>
+            <div class="form-container">
+                <input type="text" placeholder="Enter your name">
+                <button class="button">Submit</button>
+            </div>
+            <div class="code-snippet">
+                // Select the input element
+                document.querySelector('input');
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Dynamic Content</h2>
+            <div id="dynamic-content">
+                This content can be manipulated using DOM
+            </div>
+            <div class="code-snippet">
+                // Change the text content
+                document.getElementById('dynamic-content').textContent = 'New content';
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
